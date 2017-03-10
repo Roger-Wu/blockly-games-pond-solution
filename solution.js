@@ -14,7 +14,7 @@ while (true) {
   // scan enemy
   enemy_dist = scan(cannon_angle, cannon_scan_width);
   
-  // if enemy is found, shoot it
+  // if an enemy is scanned, shoot it
   if (enemy_dist <= 70) {
     cannon(cannon_angle, enemy_dist);
   }
