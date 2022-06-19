@@ -4,20 +4,17 @@ My solution to [blockly games : pond](https://blockly-games.appspot.com/pond-duc
 
 100% win rate when playing with the default AI, but may not be good in PVP.
 
-## solution 1
+## Solution
 ```js
 var cannon_angle = 0;
-var cannon_angle_diff = 10;
 var cannon_scan_width = cannon_angle_diff;
 var enemy_dist;
 var swim_angle = 0;
-var swim_angle_diff = 2;
-var swim_speed = 100;
 
 while (true) {
   // swim circularly
-  swim_angle += swim_angle_diff;
-  swim(swim_angle, swim_speed);
+  swim_angle += 2;
+  swim(swim_angle, 100);
 
   // scan enemy
   enemy_dist = scan(cannon_angle, cannon_scan_width);
@@ -28,7 +25,7 @@ while (true) {
   }
   // if no enemy around, keep on scanning
   else {
-    cannon_angle += cannon_angle_diff;
+    cannon_angle += 10;
   }
 }
 ```
