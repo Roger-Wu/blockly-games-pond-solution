@@ -1,15 +1,12 @@
 var cannon_angle = 0;
-var cannon_angle_diff = 10;
-var cannon_scan_width = cannon_angle_diff;
+var cannon_scan_width = 10;
 var enemy_dist;
 var swim_angle = 0;
-var swim_angle_diff = 2;
-var swim_speed = 100;
 
 while (true) {
   // swim circularly
-  swim_angle += swim_angle_diff;
-  swim(swim_angle, swim_speed);
+  swim_angle += 2;
+  swim(swim_angle, 100);
 
   // scan enemy
   enemy_dist = scan(cannon_angle, cannon_scan_width);
@@ -20,6 +17,6 @@ while (true) {
   }
   // if no enemy around, keep on scanning
   else {
-    cannon_angle += cannon_angle_diff;
+    cannon_angle += 10;
   }
 }
