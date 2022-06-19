@@ -7,7 +7,6 @@ My solution to [blockly games : pond](https://blockly-games.appspot.com/pond-duc
 ## Solution
 ```js
 var cannon_angle = 0;
-var cannon_scan_width = cannon_angle_diff;
 var enemy_dist;
 var swim_angle = 0;
 
@@ -17,7 +16,7 @@ while (true) {
   swim(swim_angle, 100);
 
   // scan enemy
-  enemy_dist = scan(cannon_angle, cannon_scan_width);
+  enemy_dist = scan(cannon_angle, 10);
   
   // if an enemy is scanned, shoot it
   if (enemy_dist <= 70) {
