@@ -1,4 +1,4 @@
-# blockly-games-new-pond-solution
+# blockly-games-pond-solution
 
 My solution to [Blockly games : Pond](https://blockly-games.appspot.com/pond-duck), written in JavaScript.
 
